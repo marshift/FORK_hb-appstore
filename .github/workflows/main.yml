@@ -46,9 +46,9 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: appstore.${{ matrix.ext }}
-        path: /__w/hb-appstore/hb-appstore/appstore.${{ matrix.ext }}
+        path: /__w/${{ github.event.repository.name }}/${{ github.event.repository.name }}/appstore.${{ matrix.ext }}
     - if: matrix.platform == 'wiiu'
       uses: actions/upload-artifact@v4
       with:
         name: appstore.rpx
-        path: /__w/hb-appstore/hb-appstore/appstore.rpx
+        path: /__w/${{ github.event.repository.name }}/${{ github.event.repository.name }}/appstore.rpx
